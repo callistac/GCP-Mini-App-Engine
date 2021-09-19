@@ -32,4 +32,5 @@ To split traffic for your app (i.e. you can split traffic between different vers
 gcloud app services set-traffic [MY_SERVICE] --splits [MY_VERSION1]=[VERSION1_WEIGHT],[MY_VERSION2]=[VERSION2_WEIGHT] --split-by [IP_OR_COOKIE]
 ```
 Note: make sure that both of your versions of the app are have status "serving" (not stopped). 
+There are two different types of splitting options, by IP (which is easier but not as precise) or cookie (which is more precise but more difficult).
 
