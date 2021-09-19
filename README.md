@@ -20,6 +20,11 @@ You can open the deployed app by typing:
 gcloud app browse
 ```
 ### Making changes to app
-Make edits to your code and then run the `gcloud app deploy` command again which will create a new version of your app and promotes it to the default version. All versions of the app are stored and are billable (so delete non-default versions of app).
+Make edits to your code and then run the `gcloud app deploy` command again which will create a new version of your app and promotes it to the default version. All versions of the app are stored and are billable (so delete non-default versions of app to reduce costs).
 
+### Splitting Traffic
+To split traffic for your app (i.e. you can split traffic between different versions of your app for A/B testing), run:
+```
+gcloud app services set-traffic [MY_SERVICE] --splits [MY_VERSION1]=[VERSION1_WEIGHT],[MY_VERSION2]=[VERSION2_WEIGHT] --split-by [IP_OR_COOKIE]
+```
 
