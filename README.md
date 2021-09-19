@@ -34,3 +34,6 @@ gcloud app services set-traffic [MY_SERVICE] --splits [MY_VERSION1]=[VERSION1_WE
 Note: make sure that both of your versions of the app are have status "serving" (not stopped). 
 There are two different types of splitting options, by IP (which is easier but not as precise) or cookie (which is more precise but more difficult).
 
+### Migrate Traffic
+You can migrate traffic to a version either immediately or gradually. 
+
