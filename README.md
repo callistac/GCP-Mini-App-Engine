@@ -12,8 +12,10 @@ for AppEngine. For a list of all the parameters the app.yaml file could have, vi
 ### Deploying app
 Run the following command in the root of your application:
 ```
-gcloud app deploy
+gcloud app deploy --version 1
 ```
+If you do not want this version of the app to be the default version, add the `--no-promote` flag
+
 
 ### Accessing your app
 You can open the deployed app by typing:
