@@ -8,7 +8,7 @@ Each GCP project can be associated with one App Engine project. You can have mul
 
 Once created, in the root folder of the app (the same directory as the manage.py file), create an app.yaml file which acts as the configuration file 
 for AppEngine. For a list of all the parameters the app.yaml file could have, view the GCP documentation [here](https://cloud.google.com/appengine/docs/standard/python3/config/appref?authuser=2).
-
+## General AppEngine Tips
 ### Deploying app
 Run the following command in the root of your application:
 ```
@@ -39,3 +39,12 @@ I was not able to get the above working but made a post about this and still nee
 ### Migrate Traffic
 You can migrate traffic to a version either immediately or gradually. 
 
+## Django Applications
+https://cloud.google.com/python/django/appengine#macos-64-bit
+For some reason when I try to deploy the app (one of the final steps) it does not woork for me... I get an error:	
+```
+could not connect to server: Connection refused
+	Is the server running locally and accepting
+	connections on Unix domain socket "/cloudsql/luminous-bazaar-326123:us-central:db-instance/.s.PGSQL.5432"?`
+```
+I think what happened is that I wasn't running the server locally anymore so check to see if this is the problem! 
