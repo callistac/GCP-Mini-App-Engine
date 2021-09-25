@@ -55,10 +55,10 @@ Perform the following steps:
 
 Tip: Make sure you follow the steps in the "Run the app on your local computer" section CAREFULLY. Open new terminals as suggested and run the app migrations etc. in the terminal you use to create the database etc. 
 
-For some reason when I try to deploy the app (one of the final steps) it does not woork for me... I get an error:	
-```
-could not connect to server: Connection refused
-	Is the server running locally and accepting
-	connections on Unix domain socket "/cloudsql/luminous-bazaar-326123:us-central:db-instance/.s.PGSQL.5432"?`
-```
-I think what happened is that I wasn't running the server locally anymore so check to see if this is the problem! 
+### Make Django App Production Ready
+1. Make sure DEBUG is set to False in mysite/settings.py (so that detailed error messages are not shown)
+2. Limit the database user privleges 
+
+
+### Avoiding charges
+1. All versions of an application are billable so make sure to delete versions you no longer want
