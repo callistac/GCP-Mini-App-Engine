@@ -37,9 +37,20 @@ There are two different types of splitting options, by IP (which is easier but n
 I was not able to get the above working but made a post about this and still need to try this option -> https://stackoverflow.com/questions/69246432/why-is-my-gcp-app-engine-not-splitting-traffic-correctly
 
 ### Migrate Traffic
-You can migrate traffic to a version either immediately or gradually. 
+You can migrate traffic to a version either immediately or gradually and can do so through the gcloud tool or console. 
 
 ## Django Applications
+Django applications use a backend SQL database to store GET requests made to your application (i.e. a user entering their name in a form etc.). When deploying a Django app using AppEngine, you will also need to create a Cloud SQL instance. You also need to allow Django to have information on your database credentials (username / password) and so instead of hardcoding that info in your Django app, you can use Secret Manager.
+
+Perform the following steps:
+1. Create a SQL database (preferably PostgreSQL because Django supports it the most)
+2. Create a database within your PostgreSQL instance
+3. Create a user within the database (including username / password)
+4. Use Secret Manager to store your username / password so that AppEngine / Django have access
+5. Run your Django app locally
+6. Deploy the app to AppEngine
+7. Access the app
+
 https://cloud.google.com/python/django/appengine#macos-64-bit
 For some reason when I try to deploy the app (one of the final steps) it does not woork for me... I get an error:	
 ```
