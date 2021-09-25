@@ -40,6 +40,7 @@ I was not able to get the above working but made a post about this and still nee
 You can migrate traffic to a version either immediately or gradually and can do so through the gcloud tool or console. 
 
 ## [Django Applications](https://cloud.google.com/python/django/appengine#macos-64-bit)
+**Note the following instructions are for a standard AppEngine**
 Django applications use a backend SQL database to store GET requests made to your application (i.e. a user entering their name in a form etc.). When deploying a Django app using AppEngine, you will also need to create a Cloud SQL instance. You also need to allow Django to have information on your database credentials (username / password) and so instead of hardcoding that info in your Django app, you can use Secret Manager.
 
 Perform the following steps:
