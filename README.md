@@ -47,9 +47,10 @@ Perform the following steps:
 2. Create a database within your PostgreSQL instance
 3. Create a user within the database (including username / password)
 4. Use Secret Manager to store your username / password so that AppEngine / Django have access
-5. Run your Django app locally
+5. Run your Django app locally `gcloud app deploy`
 6. Deploy the app to AppEngine
-7. Access the app
+7. Access the app using `gcloud app browse or through` the console
+8. To make changes, edit the source code and then run `gcloud app deploy` again 
 
 https://cloud.google.com/python/django/appengine#macos-64-bit
 For some reason when I try to deploy the app (one of the final steps) it does not woork for me... I get an error:	
