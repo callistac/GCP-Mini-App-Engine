@@ -53,6 +53,8 @@ Perform the following steps:
 7. Access the app using `gcloud app browse or through` the console
 8. To make changes, edit the source code and then run `gcloud app deploy` again 
 
+Tip: Make sure you follow the steps in the "Run the app on your local computer" section CAREFULLY. Open new terminals as suggested and run the app migrations etc. in the terminal you use to create the database etc. 
+
 For some reason when I try to deploy the app (one of the final steps) it does not woork for me... I get an error:	
 ```
 could not connect to server: Connection refused
