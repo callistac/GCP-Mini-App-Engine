@@ -31,8 +31,8 @@ To split traffic for your app (i.e. you can split traffic between different vers
 ```
 gcloud app services set-traffic [MY_SERVICE] --splits [MY_VERSION1]=[VERSION1_WEIGHT],[MY_VERSION2]=[VERSION2_WEIGHT] --split-by [IP_OR_COOKIE]
 ```
-Note: make sure that both of your versions of the app are have status "serving" (not stopped). 
-There are two different types of splitting options, by IP (which is easier but not as precise) or cookie (which is more precise but more difficult).
+Note: you can also split traffic in the console and make sure that both of your versions of the app are have status "serving" (not stopped). 
+There are two different types of splitting options, by IP (which is not as precise) or cookie (which is more precise). IP splitting doesn't work if both of your instances have the same target url so it is probably safest to use cookie splitting. 
 
 I was not able to get the above working but made a post about this and still need to try this option -> https://stackoverflow.com/questions/69246432/why-is-my-gcp-app-engine-not-splitting-traffic-correctly
 
@@ -58,7 +58,6 @@ Tip: Make sure you follow the steps in the "Run the app on your local computer" 
 ### Make Django App Production Ready
 1. Make sure DEBUG is set to False in mysite/settings.py (so that detailed error messages are not shown)
 2. Limit the database user privleges 
-
 
 ### Avoiding charges
 1. All versions of an application are billable so make sure to delete versions you no longer want
