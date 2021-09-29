@@ -7,6 +7,8 @@ In the **standard** environment, your application runs on a lightweight instance
 
 In contrast, the **flexible** environment runs your application in Docker containers on Google Compute Engine virtual machines (VMs), which have fewer restrictions. For example, you can use any programming language of your choice, write to disk, use any library you'd like, and even run multiple processes. The flexible environment also allows you to choose any Compute Engine machine type for your instances so that your application has access to more memory and CPU.
 
+Essentially, standard environments should be sufficient for most applications. Flexible environment is meant to be complementary to standard environment, in other words, if a part of your application needs more CPU, you can define a microservice for that particular part that runs in the standard environment. See the bottom of the documentation linked above for more information.
+
 # [GCP App Engine Documentation](https://cloud.google.com/python/django/appengine)
 Each GCP project can be associated with one App Engine project. You can have multiple services for a given project (each service will have an app.yaml file which configures your app engine settings). Make sure app engine is initalized by running `gcloud app create` (which will require you to select your preferred region).
 
