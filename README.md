@@ -1,7 +1,8 @@
 # GCP-Mini-App-Engine
 App Engine Project created to study for the Google Associate Cloud Engineer certification. 
 
-There are two different types of environments for app engine: flexible and standard. From GCP documentation:
+There are two different types of environments for app engine: flexible and standard. From [GCP documentation](https://cloud.google.com/appengine/docs/flexible/go/flexible-for-standard-users#:~:text=In%20the%20standard%20environment%2C%20your,what%20your%20application%20can%20do.&text=In%20contrast%2C%20the%20flexible%20environment,)%2C%20which%20have%20fewer%20restrictions.):
+
 In the **standard** environment, your application runs on a lightweight instance inside of a sandbox. This sandbox restricts what your application can do. For example, the sandbox only allows your app to use a limited set of binary libraries, and your app cannot write to disk. The standard environment also limits the CPU and memory options available to your application. Because of these restrictions, most App Engine standard applications tend to be stateless web applications that respond to HTTP requests quickly.
 
 In contrast, the **flexible** environment runs your application in Docker containers on Google Compute Engine virtual machines (VMs), which have fewer restrictions. For example, you can use any programming language of your choice, write to disk, use any library you'd like, and even run multiple processes. The flexible environment also allows you to choose any Compute Engine machine type for your instances so that your application has access to more memory and CPU.
