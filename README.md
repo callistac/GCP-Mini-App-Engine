@@ -46,7 +46,7 @@ I was not able to get the above working but made a post about this and still nee
 You can migrate traffic to a version either immediately or gradually and can do so through the gcloud tool or console. 
 
 ### Scaling
-In your app.yaml file yoou can specify the scaling parameters (i.e. max number of instances to attach to an application to limit costs and min number - which if you set to 0, when your app is not serving requests you will save money because there will be no instances attached).
+In your app.yaml file yoou can specify the scaling parameters (i.e. max number of instances to attach to an application to limit costs and min number - which if you set to 0, when your app is not serving requests you will save money because there will be no instances attached). There are many more parameters you can specify in automatic scaling but there is also a basic and manual scaling option as well. See this document for more details:
 
 https://cloud.google.com/appengine/docs/standard/python3/config/appref#automatic_scaling
 
