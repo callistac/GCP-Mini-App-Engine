@@ -41,7 +41,7 @@ gcloud app browse
 or you can go to the Versions tab in Cloud Console and select on the instance link to interact with the app.
 
 ### Debugging
-When I first tried deploying my own application, I kept getting 
+When I first tried deploying my own application, I kept getting 502 Bad Gateway errors which are not super informative in themselves. However, if you search for the Logging tool in Cloud Console (making sure you are on the relevant project), you will see logging / error files for each GCP resource. There are also sometimes helpful resources on GCP's [website](https://cloud.google.com/endpoints/docs/openapi/troubleshoot-response-errors#gae_errors). In my case, I forgot to add a requirements.txt file and then added one and went to redeploy my app, but I still got the same error. Once I created a new project with a new app, I was able to start fresh and create and deploy a new app with all the required files and it worked for me.
 
 ### Making changes to app
 Make edits to your code and then run the `gcloud app deploy` command again which will create a new version of your app and promotes it to the default version. All versions of the app are stored and are billable (so delete non-default versions of app to reduce costs).
