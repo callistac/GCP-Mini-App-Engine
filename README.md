@@ -14,7 +14,18 @@ Each GCP project can be associated with one App Engine project. You can have mul
 
 Once created, in the root folder of the app (the same directory as the manage.py file), create an app.yaml file which acts as the configuration file 
 for AppEngine. For a list of all the parameters the app.yaml file could have, view the GCP documentation [here](https://cloud.google.com/appengine/docs/standard/python3/config/appref?authuser=2).
-## General AppEngine Tips
+## General AppEngine Workflow
+### Required files
+In the root of your repository you must have:
+1. `app.yaml` which is what AppEngine uses to configure your app
+2. `requirements.txt` which contain the dependencies needed to run your app
+3. `main.py` or equivalent, which contains the application framework code (i.e. flask, django, etc.) for your app
+
+### Creating an app
+In your terminal with the gcloud tool installed, type 
+```
+gcloud app create
+```
 ### Deploying app
 Run the following command in the root of your application:
 ```
@@ -22,12 +33,15 @@ gcloud app deploy --version 1
 ```
 If you do not want this version of the app to be the default version, add the `--no-promote` flag
 
-
 ### Accessing your app
 You can open the deployed app by typing:
 ```
 gcloud app browse
 ```
+or you can go to the Versions tab in Cloud Console and select on the instance link to interact with the app.
+
+### Debugging
+When I first tried deploying my own application, I kept getting 
 
 ### Making changes to app
 Make edits to your code and then run the `gcloud app deploy` command again which will create a new version of your app and promotes it to the default version. All versions of the app are stored and are billable (so delete non-default versions of app to reduce costs).
